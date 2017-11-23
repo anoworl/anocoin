@@ -1,19 +1,19 @@
 pragma solidity ^0.4.18;
 
 
-import "../token/StandardToken.sol";
+import 'zeppelin-solidity/contracts/token/StandardToken.sol';
 
 
 /**
- * @title SimpleToken
+ * @title AnoCoin
  * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
  * Note they can later distribute these tokens as they wish using `transfer` and other
  * `StandardToken` functions.
  */
-contract SimpleToken is StandardToken {
+contract AnoCoin is StandardToken {
 
-  string public constant name = "SimpleToken";
-  string public constant symbol = "SIM";
+  string public constant name = "AnoCoin";
+  string public constant symbol = "ANO";
   uint8 public constant decimals = 18;
 
   uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
@@ -21,7 +21,7 @@ contract SimpleToken is StandardToken {
   /**
    * @dev Constructor that gives msg.sender all of existing tokens.
    */
-  function SimpleToken() public {
+  function AnoCoin() public {
     totalSupply = INITIAL_SUPPLY;
     balances[msg.sender] = INITIAL_SUPPLY;
   }
