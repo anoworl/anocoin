@@ -1,5 +1,5 @@
-var Migrations = artifacts.require("./Migrations.sol");
+var AnoCoin = artifacts.require("./AnoCoin.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(AnoCoin);
 };
